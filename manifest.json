@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "StyleHub",
+  "description": "for people who want custom site styles",
+  "author": "wtser",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "script/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "stylehubfile.js",
+        "script/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "index.html",
+  "permissions": [
+    "notifications",
+    "<all_urls>"
+  ]
+}
