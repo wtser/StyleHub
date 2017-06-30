@@ -7,7 +7,6 @@
   "background": {
     "persistent": false,
     "scripts": [
-      "stylehubfile.js",
       "script/background.js"
     ]
   },
