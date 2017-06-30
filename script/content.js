@@ -29,6 +29,7 @@ getSyncFile().then(function (syncStyle) {
     let styleApply = function (styleText) {
         let $style = document.createElement('style');
         $style.type = 'text/css';
+        $style.setAttribute('source', 'stylehub');
 
         $style.appendChild(document.createTextNode(styleText));
         //$style.styleSheet.cssText = styleText;
