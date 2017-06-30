@@ -22,11 +22,9 @@ getSyncFile().then(function (syncStyle) {
         console.log(syncStyle)
 
     } else {
-        //chrome.storage.local.set({stylehubfile: initStyle});
         chrome.storage.sync.set({stylehubfile: initStyle});
     }
     let usingStyle = syncStyle || initStyle;
-    console.log(usingStyle[0].pattern.toString())
 
     let styleApply = function (styleText) {
         let $style = document.createElement('style');
@@ -39,7 +37,7 @@ getSyncFile().then(function (syncStyle) {
     };
 
     usingStyle.forEach(function (styleItem) {
-        let isUrlMatch = location.href.match(styleItem.pattern);
+        let isUrlMatch = (new RegExp(styleItem.pattern)).test(location.href);
         if (isUrlMatch) {
             styleApply(styleItem.styleText);
             if (styleItem.scriptText) {
