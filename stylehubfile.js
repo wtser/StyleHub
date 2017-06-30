@@ -1,4 +1,4 @@
-let stylesheet = [
+let initStyle = [
     {
         pattern: /weibo.com\/[\d]+\/[\w]+/,
         styleText: `.WB_frame_b{display:none;}.WB_frame_c{width:100%;}.WB_media_wrap .media_box{float:none;}.WB_h5video{width:100%;height: 0;padding-bottom: 76%;}`,

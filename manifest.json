@@ -7,6 +7,7 @@
   "background": {
     "persistent": false,
     "scripts": [
+      "stylehubfile.js",
       "script/background.js"
     ]
   },
@@ -25,6 +26,7 @@
   "options_page": "index.html",
   "permissions": [
     "notifications",
+    "storage",
     "<all_urls>"
   ]
 }
