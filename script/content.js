@@ -19,7 +19,7 @@ let getSyncFile = function () {
 
 getSyncFile().then(function (syncStyle) {
     if (syncStyle) {
-        console.log(syncStyle)
+        //console.log(syncStyle)
 
     } else {
         chrome.storage.sync.set({stylehubfile: initStyle});

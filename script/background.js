@@ -14,7 +14,7 @@ getSyncFile().then(function (syncStyle) {
     }
 
     let html = syncStyle.reduce(function (memo, item, i) {
-        console.log(item)
+        //console.log(item)
         let patternStr = item.pattern.toString()
         return memo +  `<li>
     <input class="style-pattern" type="text" value="${patternStr}">
