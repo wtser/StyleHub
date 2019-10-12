@@ -20,7 +20,7 @@ function render() {
         memo +
         `<li class="style-item" data-index="${i}">
           <input class="style-pattern" value="${patternStr}">
-          <textarea class="style-text" name="" id="" cols="30" rows="4">${
+          <textarea class="style-text" name="" id="" cols="30" rows="6">${
             item.styleText
           }</textarea>
           <button class="style-del" >del</button>
